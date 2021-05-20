@@ -1,4 +1,5 @@
-from motor import DC_Motor as Motor
+#!python3
+import math
 
 class PID:
     def __init__ (self, P = 1, I = 1, D = 1, delta_t = 0.001):
@@ -17,13 +18,4 @@ class PID:
 
 
 if __name__ == '__main__':
-    motor = Motor()
-    pid = PID(50, 10, 1)
-    target = 200
-    print('time,target,pid')
-    for millisecond in range(1000):
-        angle = motor.angle
-        controlSignal = pid.update(target - angle)
-        motor.update(controlSignal)
-
-        print(f'{millisecond/1000},{target},{angle}')
+    pass
