@@ -10,6 +10,12 @@ class PID:
         self.pre_error = 0
         self.delta_t = delta_t
 
+    def get_error_sum:
+        return self.error_sum
+
+    def get_pre_error:
+        return self.pre_error
+
     def update (self, error):
         self.error_sum += error * self.delta_t
         y = self.P * error + self.I * self.error_sum + self.D * (error - self.pre_error) / self.delta_t
